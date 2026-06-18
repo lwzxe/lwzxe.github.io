@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chango&family=Great+Vibes&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --cor--padrao: #2bffd5;
+    --fundo-secao: #f0f0f0;
+    --cor--barra: #97ffea;
+}
+
+* {
+padding: 0;
+border: 0;
+margin: 0;
+box-sizing: 0;
+}
+html, body {
+    min-height: 100vh;
+    background-color: var(--cor--padrao);
+}
+
+main{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 16px;
+    margin: 20px;
+    font-family: 'Saira', sans-serif;
+}
+@media (max-width: 880px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+.esquerda, .experiencias, .educacao{
+    background-color: var(--fundo-secao);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.experiencias, .educacao{
+    padding: 20px;
+}
+.esquerda{
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.direita{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.data, i{
+    font-size: 12px;
+    color: var(--cor--padrao);
+}
+
+ul {
+    list-style: none;
+}
+.imagem-esquerda{
+    position: relative;
+}
+.imagem-esquerda img{
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+
+}
+.imagem-esquerda h1{
+    position: absolute;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+}
+
+.pessoal, .habilidades, .linguagens, .projetos{
+    padding: 20px;
+    line-height: 20px;
+}
+.progresso{
+    display: block;
+    width: 100%;
+    height: 16px;
+    background-color: var(--cor--barra);
+    border-radius: 20px;
+    margin-top: 5px;
+    transition: width 100ms ease;
+}
+.barra{
+    display: block;
+    height: 100%;
+    background-color: var(--cor--padrao);
+    border-radius: 20px;
+}
+.nome-item{
+    font-weight: bolder;
+    margin-top: 20px;
+}
+footer{
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    padding: 1.5rem; /*24px*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer a{
+    color: var(--cor--padrao);
+    text-decoration: none;
+    padding: 5px;
+    transition: 100ms ease;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+footer a:hover{
+    color:white;
+    border: 2px solid white;
+}
